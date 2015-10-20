@@ -42,8 +42,15 @@ $('#answer3').html( gbpTitle + " $" + gbpPrice );
 var wooden = _.chain(items).filter(function(item){
   return _.contains(item.materials, 'wood');
 }).pluck('title').value();
+var listWooden= function(array){
+  var str= "";
+_.each(array,function(item, idx, arr){
 
-$('#answer4').html(wooden);
+    str+= "<b>Item: </b>" + item + "<br>";
+  });
+  return str;
+}
+$('#answer4').html(listWooden(wooden));
 //Question 5
 
 /*var eightOrMore = items.filter(function(item){
