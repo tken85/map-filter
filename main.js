@@ -1,4 +1,4 @@
-
+$(document).ready(function(){
 // Question 1
 var averagePrice = function(array){
   var total = 0;
@@ -84,3 +84,5 @@ var madeBy = function(array){
 }
 
 $('#answer6').html(madeBy(items));
+
+})
